@@ -12,7 +12,8 @@ export const WAGYU_DATA: WagyuBrand[] = [
     recommendedCuts: ['カルビ', 'ロース'],
     priceRange: '5,000円〜18,000円',
     imageUrl: 'https://uu-hokkaido.jp/img/special/beef/shiraoi/about.jpg',
-    coordinates: { x: 83, y: 18 } // 北海道・白老付近
+    advice: '白老牛は脂の質が非常に良いため、わさびを多めに添えた「白焼き」がおすすめです。肉本来の甘みを引き立てる岩塩を少しだけつけて、地元のキリッと冷えた地酒と共に味わってください。',
+    coordinates: { x: 83, y: 18 }
   },
   {
     id: 'maesawa',
@@ -24,7 +25,8 @@ export const WAGYU_DATA: WagyuBrand[] = [
     recommendedCuts: ['ステーキ', 'すき焼き'],
     priceRange: '8,000円〜25,000円',
     imageUrl: 'https://www.ja-town.com/img/goods/2103/C/2103-2101-22-01.jpg',
-    coordinates: { x: 80, y: 38 } // 岩手
+    advice: '前沢牛は融点が非常に低いため、室温に戻してからさっと表面を焼くのが美味しく頂くコツです。醤油ベースのガーリックソースが、濃厚な脂の旨みと驚くほどマッチします。',
+    coordinates: { x: 80, y: 38 }
   },
   {
     id: 'yonezawa',
@@ -36,7 +38,8 @@ export const WAGYU_DATA: WagyuBrand[] = [
     recommendedCuts: ['すき焼き用ロース', 'ランプ'],
     priceRange: '7,000円〜20,000円',
     imageUrl: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTf6TjlNkzCmDyooYK7pg0SuzY7uQXoot0EoQ&s',
-    coordinates: { x: 74, y: 45 } // 山形
+    advice: '米沢牛といえば「すき焼き」こそが至高。割り下で煮込みすぎず、お肉が桜色になった瞬間に、新鮮な卵をたっぷり絡めて頂くのが美食家流。赤ワインとの相性も抜群です。',
+    coordinates: { x: 74, y: 45 }
   },
   {
     id: 'hida',
@@ -48,7 +51,8 @@ export const WAGYU_DATA: WagyuBrand[] = [
     recommendedCuts: ['ロース', 'イチボ'],
     priceRange: '6,000円〜18,000円',
     imageUrl: 'https://www.g-call.com/shopping/goods/images/83429_1.jpg',
-    coordinates: { x: 62, y: 62 } // 岐阜
+    advice: '飛騨牛は郷土料理「朴葉味噌（ほうばみそ）」と一緒にぜひ。味噌の香ばしさと朴葉の香りが、飛騨牛の脂の甘みをさらに引き立て、ご飯もお酒も止まらなくなる逸品に変わります。',
+    coordinates: { x: 62, y: 62 }
   },
   {
     id: 'omi',
@@ -60,7 +64,8 @@ export const WAGYU_DATA: WagyuBrand[] = [
     recommendedCuts: ['ミスジ', 'モモ'],
     priceRange: '8,000円〜25,000円',
     imageUrl: 'https://img.tkjm.jp/webshop/006/131/sl_21078.jpg',
-    coordinates: { x: 57, y: 66 } // 滋賀
+    advice: '近江牛は「しゃぶしゃぶ」で頂くのが真髄。昆布だしにくぐらせ、まだ少し赤みが残るくらいで引き上げ、さっぱりとしたポン酢で頂くことで、肉本来の繊細な旨みが際立ちます。',
+    coordinates: { x: 57, y: 66 }
   },
   {
     id: 'matsusaka',
@@ -72,7 +77,8 @@ export const WAGYU_DATA: WagyuBrand[] = [
     recommendedCuts: ['サーロイン', 'リブロース'],
     priceRange: '15,000円〜40,000円',
     imageUrl: 'https://ushioidochu.com/test/wp-content/themes/cocoon-child-master/img/commit_cont9_img2.png',
-    coordinates: { x: 60, y: 73 } // 三重
+    advice: '最高級の松阪牛は、ぜひ厚切りのステーキで。味付けはシンプルに「岩塩」のみ。口の中で溶ける際の独特の甘い香りを、鼻に抜ける余韻までじっくりと堪能してください。',
+    coordinates: { x: 60, y: 73 }
   },
   {
     id: 'kobe',
@@ -84,7 +90,8 @@ export const WAGYU_DATA: WagyuBrand[] = [
     recommendedCuts: ['フィレ', 'シャトーブリアン'],
     priceRange: '12,000円〜35,000円',
     imageUrl: 'https://img21.shop-pro.jp/PA01404/493/etc/kobebeef-im05.png',
-    coordinates: { x: 52, y: 68 } // 兵庫
+    advice: '世界を魅了する神戸ビーフは「鉄板焼き」が一番。職人の手さばきを見ながら、ガーリックチップと共にミディアムレアで。溢れ出す芳醇な肉汁の輝きは、まさに食べる宝石です。',
+    coordinates: { x: 52, y: 68 }
   },
   {
     id: 'olive',
@@ -96,7 +103,8 @@ export const WAGYU_DATA: WagyuBrand[] = [
     recommendedCuts: ['赤身ステーキ', 'リブロース'],
     priceRange: '5,000円〜15,000円',
     imageUrl: 'https://www.kensanpin.org/wp-content/uploads/2019/09/905242580198194a72c03c2d190be714.jpg',
-    coordinates: { x: 48, y: 78 } // 香川
+    advice: 'オリーブ牛はオレイン酸のおかげで脂が固まりにくいため、冷製料理の「タタキ」や「カルパッチョ」でも絶品です。赤身の旨みが強いので、少し厚めのカットで噛み応えを楽しむのが正解。',
+    coordinates: { x: 48, y: 78 }
   },
   {
     id: 'saga',
@@ -108,7 +116,8 @@ export const WAGYU_DATA: WagyuBrand[] = [
     recommendedCuts: ['ヒレ', 'サーロイン'],
     priceRange: '8,000円〜25,000円',
     imageUrl: 'https://images.unsplash.com/photo-1529692236671-f1f6cf9683ba?auto=format&fit=crop&q=80&w=800',
-    coordinates: { x: 15, y: 84 } // 佐賀（九州）
+    advice: '佐賀牛の「艶さし」を堪能するにはシンプルに網焼きで。タレにつけすぎず、まずは塩胡椒だけでその驚くべきお肉の甘みを確かめてください。九州の豊かな麦焼酎ともよく合います。',
+    coordinates: { x: 12, y: 82 }
   },
   {
     id: 'miyazaki',
@@ -120,6 +129,7 @@ export const WAGYU_DATA: WagyuBrand[] = [
     recommendedCuts: ['サーロイン', '肩ロース'],
     priceRange: '7,000円〜22,000円',
     imageUrl: 'https://www.kanko-miyazaki.jp/storage/special_feature_paragraphs/233/responsive_images/CrzNmkANap1w1BQtphUDpaSvVhihWFcL7tjHuALk__1742_1161.jpg',
-    coordinates: { x: 23, y: 92 } // 宮崎（九州）
+    advice: '王座に君臨する宮崎牛は、サーロインを厚めにカットし「柚子胡椒」をひと塗りして。脂の甘みを柚子の香りが引き締め、贅沢の極みとも言える大人の味わいが広がります。',
+    coordinates: { x: 19, y: 91 }
   }
 ];

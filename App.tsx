@@ -8,8 +8,22 @@ import StampBook from './components/StampBook';
 
 const App: React.FC = () => {
   const [state, setState] = useState<AppState>(() => {
-    const saved = localStorage.getItem('wagyu-app-state');
-    return saved ? JSON.parse(saved) : {
+    try {
+      const saved = localStorage.getItem('wagyu-app-state');
+      if (saved) {
+        const parsed = JSON.parse(saved);
+        if (Array.isArray(parsed.collectedStamps)) {
+          return {
+            collectedStamps: parsed.collectedStamps,
+            currentView: (parsed.currentView as ViewType) || 'MAP',
+            selectedWagyuId: parsed.selectedWagyuId || null
+          };
+        }
+      }
+    } catch (e) {
+      console.error("Failed to load state from localStorage:", e);
+    }
+    return {
       collectedStamps: [],
       currentView: 'MAP' as ViewType,
       selectedWagyuId: null

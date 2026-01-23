@@ -9,13 +9,14 @@ export interface WagyuBrand {
   recommendedCuts: string[];
   priceRange: string;
   imageUrl: string;
-  coordinates: { x: number; y: number }; // Relative coordinates for the map
+  advice: string; // 美食家のワンポイントアドバイス
+  coordinates: { x: number; y: number };
 }
 
 export type ViewType = 'MAP' | 'LIST' | 'STAMP_BOOK' | 'DETAIL';
 
 export interface AppState {
-  collectedStamps: string[]; // IDs of collected wagyu
+  collectedStamps: string[];
   currentView: ViewType;
   selectedWagyuId: string | null;
 }

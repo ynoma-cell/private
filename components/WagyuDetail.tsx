@@ -1,7 +1,6 @@
 
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import { WagyuBrand } from '../types';
-import { getWagyuExpertAdvice } from '../services/geminiService';
 
 interface WagyuDetailProps {
   wagyu: WagyuBrand;
@@ -11,19 +10,6 @@ interface WagyuDetailProps {
 }
 
 const WagyuDetail: React.FC<WagyuDetailProps> = ({ wagyu, isCollected, onToggleStamp, onBack }) => {
-  const [advice, setAdvice] = useState<string>('');
-  const [loadingAdvice, setLoadingAdvice] = useState<boolean>(false);
-
-  useEffect(() => {
-    const fetchAdvice = async () => {
-      setLoadingAdvice(true);
-      const text = await getWagyuExpertAdvice(wagyu.name);
-      setAdvice(text);
-      setLoadingAdvice(false);
-    };
-    fetchAdvice();
-  }, [wagyu.name]);
-
   return (
     <div className="flex flex-col gap-6 animate-in fade-in slide-in-from-bottom-4 duration-500">
       <div className="relative h-64 md:h-80 rounded-3xl overflow-hidden shadow-2xl">
@@ -55,15 +41,8 @@ const WagyuDetail: React.FC<WagyuDetailProps> = ({ wagyu, isCollected, onToggleS
 
           <section className="bg-white p-6 rounded-3xl shadow-sm border border-slate-100">
             <h3 className="text-lg font-bold mb-3 border-l-4 border-red-600 pl-3">美食家のワンポイント・アドバイス</h3>
-            <div className="bg-amber-50/50 p-4 rounded-xl border border-amber-100 italic text-slate-800">
-              {loadingAdvice ? (
-                <div className="flex items-center justify-center py-4">
-                  <div className="w-6 h-6 border-4 border-amber-600 border-t-transparent rounded-full animate-spin"></div>
-                  <span className="ml-3 text-sm">アドバイザーが執筆中...</span>
-                </div>
-              ) : (
-                <p className="text-sm leading-relaxed whitespace-pre-wrap">{advice}</p>
-              )}
+            <div className="bg-amber-50/50 p-6 rounded-xl border border-amber-100 italic text-slate-800">
+              <p className="text-sm leading-relaxed whitespace-pre-wrap">{wagyu.advice}</p>
             </div>
           </section>
         </div>
